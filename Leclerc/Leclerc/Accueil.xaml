@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Leclerc.Accueil">
+
+    <ContentView ControlTemplate="{StaticResource Accueil}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.15*" />
+                <RowDefinition Height="0.75*" />
+                <RowDefinition Height="0.05*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.05*" />
+                <ColumnDefinition Width="0.95*" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.ColumnSpan="2" BackgroundColor="#0b70b5" ColumnSpacing="0">
+                <BoxView Color="#fafafa" />
+            </Grid>
+
+            <Image x:Name="savLogo" Grid.Column="1" Source="logosav_transparent.png" VerticalOptions="FillAndExpand">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                            Tapped="onLogoTap"
+                               NumberOfTapsRequired="1" />
+                </Image.GestureRecognizers>
+            </Image>
+            <Grid VerticalOptions="Fill" Grid.Row="1" Grid.ColumnSpan="2" RowSpacing="0" ColumnSpacing="0" Padding="0,0,0,15">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Grid x:Name="accueilButtons" Grid.Column="0" Grid.Row="0" Padding="30,0" RowSpacing="0" ColumnSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <Button ClassId="pieces" Clicked="Bouton_Click" x:Name="pieces" Grid.Column="0" BackgroundColor="#C8DEEF" Text="PIÈCES&#x0a;DÉTACHÉES" TextColor="#FFFFFF" FontAttributes="Bold" FontSize="Medium" VerticalOptions="FillAndExpand" />
+                    <Button ClassId="depannage" Clicked="Bouton_Click" x:Name="depannage" Grid.Row="0" Grid.Column="1" BackgroundColor="#f28f00" Text="DÉPANNAGE&#x0a;INFORMATIQUE" TextColor="#FFFFFF" FontAttributes="Bold" FontSize="Medium" VerticalOptions="FillAndExpand"  />
+                    <Button ClassId="reparation" Clicked="Bouton_Click" x:Name="reparation" Grid.Row="1" Grid.Column="0" BackgroundColor="#FAA62E" Text="RÉPARATION&#x0a;CYCLES" TextColor="#FFFFFF" FontAttributes="Bold" FontSize="Medium"  />
+                    <Button ClassId="antenne" Clicked="Bouton_Click" x:Name="antenne" Grid.Row="1" Grid.Column="1" BackgroundColor="#4baaea" Text="ANTENNE&#x0a;SÉCURITÉ" TextColor="#FFFFFF" FontAttributes="Bold" FontSize="Medium"  />
+                    <Button ClassId="livraison" Clicked="Bouton_Click" x:Name="livraison" Grid.Row="2" Grid.Column="0" BackgroundColor="#005abb" Text="LIVRAISON&#x0a;INSTALLATION" TextColor="#FFFFFF" FontAttributes="Bold" FontSize="Medium"  />
+                    <Button ClassId="fioul" Clicked="Bouton_Click" x:Name="fioul" Grid.Row="2" Grid.Column="1" BackgroundColor="#F3BB6A" Text="LIVRAISON&#x0a;FIOUL" TextColor="#FFFFFF" FontAttributes="Bold" FontSize="Medium" Padding="0,1,0,0"  />
+                </Grid>
+            </Grid>
+
+            <Grid x:Name="zoneBas" Grid.Row="2" Grid.ColumnSpan="2" BackgroundColor="#0B70B5">
+                <!--GRILLE CONTENANT LA ZONE DU BAS-->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.1*" />
+                    <ColumnDefinition Width="0.7*" />
+                    <ColumnDefinition Width="0.1*" />
+                    <ColumnDefinition Width="0.1*" />
+                </Grid.ColumnDefinitions>
+                <ImageButton Clicked="onSettingsTap" Grid.Row="0" Grid.Column="0" VerticalOptions="Center" Source="settings.png" BorderWidth = "0" BackgroundColor="#00000000" Padding="0,1,0,0" HeightRequest="16" WidthRequest="16" />
+                <Label x:Name="leclercR" Grid.Row="0" Grid.Column="1" Text="E.Leclerc Royan 2019 ©" TextColor="White" VerticalOptions="Center" FontSize="Small"   />
+                <ImageButton Clicked="onFacebookTap" Grid.Row="0" Grid.Column="2" VerticalOptions="End" Source="facebookround.png" BorderWidth = "0" BackgroundColor="#00000000" Padding="0,1,0,0" />
+                <ImageButton Clicked="onWebsiteTap" Grid.Row="0" Grid.Column="3" VerticalOptions="End" Source="websitelogo.jpg" BorderWidth = "0" BackgroundColor="#00000000" />
+            </Grid>
+        </Grid>
+    </ContentView>
+</ContentPage>

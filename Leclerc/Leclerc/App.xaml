@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Leclerc.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            
+            <OnPlatform x:TypeArguments="x:String" x:Key="OpenSans-Regular">
+                <On Platform="iOS" Value="OpenSans-Regular" />
+                <On Platform="Android" Value="OpenSans-Regular.ttf#Open Sans" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="OpenSans-Bold">
+                <On Platform="iOS" Value="OpenSans-Bold" />
+                <On Platform="Android" Value="OpenSans-Bold.ttf#Open Sans" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="BRLNSDB">
+                <On Platform="iOS" Value="BRLNSDB" />
+                <On Platform="Android" Value="BRLNSDB.ttf#Berlin Sans FB Demi" />
+            </OnPlatform>
+            
+            <!-- ACCUEIL ACCUEIL  ACCUEIL ACCUEIL  ACCUEIL ACCUEIL  ACCUEIL ACCUEIL  ACCUEIL ACCUEIL  ACCUEIL ACCUEIL  -->
+            <ControlTemplate x:Name="accueilTemplate" x:Key="Accueil">
+                <ContentPresenter></ContentPresenter>
+            </ControlTemplate>
+            
+            <!-- PIECES PIECES  PIECES PIECES  PIECES PIECES  PIECES PIECES  PIECES PIECES  PIECES PIECES  -->
+            <ControlTemplate x:Name="PiecesTemplate" x:Key="PiecesTemplate">
+                <ContentPresenter></ContentPresenter>
+            </ControlTemplate>
+            
+            <!-- DEPANNAGE DEPANNAGE  DEPANNAGE DEPANNAGE  DEPANNAGE DEPANNAGE  DEPANNAGE DEPANNAGE  DEPANNAGE DEPANNAGE  DEPANNAGE DEPANNAGE  -->
+            <ControlTemplate x:Name="DepannageTemplate" x:Key="DepannageTemplate">
+                <ContentPresenter></ContentPresenter>
+            </ControlTemplate>
+            
+            <!-- REPARATION REPARATION  REPARATION REPARATION  REPARATION REPARATION  REPARATION REPARATION  REPARATION REPARATION  REPARATION REPARATION  -->
+            <ControlTemplate x:Name="ReparationTemplate" x:Key="ReparationTemplate">
+                <ContentPresenter></ContentPresenter>
+            </ControlTemplate>
+            
+            <!-- ANTENNE ANTENNE  ANTENNE ANTENNE  ANTENNE ANTENNE  ANTENNE ANTENNE  ANTENNE ANTENNE  ANTENNE ANTENNE  -->
+            <ControlTemplate x:Name="AntenneTemplate" x:Key="AntenneTemplate">
+                <ContentPresenter></ContentPresenter>
+            </ControlTemplate>
+            
+            <!-- LIVRAISON LIVRAISON  LIVRAISON LIVRAISON  LIVRAISON LIVRAISON  LIVRAISON LIVRAISON  LIVRAISON LIVRAISON  LIVRAISON LIVRAISON  -->
+            <ControlTemplate x:Name="LivraisonTemplate" x:Key="LivraisonTemplate">
+                <ContentPresenter></ContentPresenter>
+            </ControlTemplate>
+            
+            <!-- FIOUL FIOUL  FIOUL FIOUL  FIOUL FIOUL  FIOUL FIOUL  FIOUL FIOUL  FIOUL FIOUL  -->
+            <ControlTemplate x:Name="FioulTemplate" x:Key="FioulTemplate">
+                <ContentPresenter></ContentPresenter>
+            </ControlTemplate>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Leclerc.AntenneTemplate">
+
+    <ContentView ControlTemplate="{StaticResource AntenneTemplate}">
+        <Grid BackgroundColor="#4baaea">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.15*" />
+                <RowDefinition Height="0.75*" />
+                <RowDefinition Height="0.1*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.05*" />
+                <ColumnDefinition Width="0.95*" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.ColumnSpan="2" BackgroundColor="#0b70b5" ColumnSpacing="0">
+                <BoxView Color="#fafafa" />
+            </Grid>
+
+            <Image x:Name="savLogo" Grid.Column="1" Source="logosav_transparent.png" VerticalOptions="FillAndExpand">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                            Tapped="onLogoTap"
+                               NumberOfTapsRequired="1" />
+                </Image.GestureRecognizers>
+            </Image>
+            <Grid VerticalOptions="Fill" Grid.Row="1" Grid.ColumnSpan="2" RowSpacing="0" ColumnSpacing="0" Padding="0,0,0,15" BackgroundColor="#4baaea">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.1*" />
+
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.85*"/>
+                    <ColumnDefinition Width="1.75*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label x:Name="titreA" 
+                       Grid.Row="0"
+                       HorizontalOptions="Center" 
+                       VerticalOptions="Start" 
+                       HorizontalTextAlignment="Center" 
+                       Grid.ColumnSpan="3"
+                       TextColor="White" 
+                       Font="Bold,20"
+                       Text=""
+                       FontFamily="{StaticResource OpenSans-Bold}" />
+                
+                <Image x:Name="antenneImage" 
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       Grid.ColumnSpan="3"
+                       Source="FONT.png"
+                       IsVisible="False"/>
+            
+                <Label x:Name="descriptionAntenne" 
+                       HorizontalOptions="Center" 
+                       VerticalOptions="Center" 
+                       HorizontalTextAlignment="Center" 
+                       TextColor="Black" 
+                       Font="Bold,14"
+                       Grid.Column="1"
+                       Text=""
+                       FontFamily="{StaticResource OpenSans-Bold}" />
+            </Grid>
+            <Grid BackgroundColor="#4baaea" Grid.ColumnSpan="2" Grid.Row="2" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.33333*" />
+                    <ColumnDefinition Width="0.33333*" />
+                    <ColumnDefinition Width="0.33333*" />
+                </Grid.ColumnDefinitions>
+                <ImageButton Clicked="OnOpenPupup" x:Name="contact" BorderWidth = "0" Grid.Column="1" BackgroundColor="#00000000" HorizontalOptions="Center" VerticalOptions="Center" Source="contact.png" />
+            </Grid>
+
+        </Grid>
+    </ContentView>
+</ContentPage>

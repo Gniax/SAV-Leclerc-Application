@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Leclerc.DepannageTemplate"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms">
+
+    <ContentView ControlTemplate="{StaticResource DepannageTemplate}">
+        <Grid BackgroundColor="#f28f00">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*" />
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="0.6*" />
+                <RowDefinition Height="0.1*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.05*" />
+                <ColumnDefinition Width="0.95*" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.ColumnSpan="2" BackgroundColor="#f28f00" ColumnSpacing="0">
+                <BoxView Color="#fafafa" />
+            </Grid>
+
+            <Image x:Name="savLogo" Grid.Column="1" Source="logosav_transparent.png" VerticalOptions="FillAndExpand">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                            Tapped="onLogoTap"
+                               NumberOfTapsRequired="1" />
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Grid BackgroundColor="#f28f00" Grid.ColumnSpan="2" Grid.Row="3" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.33333*" />
+                    <ColumnDefinition Width="0.33333*" />
+                    <ColumnDefinition Width="0.33333*" />
+                </Grid.ColumnDefinitions>
+                <ImageButton Clicked="OnOpenPupup" x:Name="contact" BorderWidth = "0" Grid.Column="1" BackgroundColor="#00000000" HorizontalOptions="Center" VerticalOptions="Center" Source="contact.png" />
+            </Grid>
+
+            <Grid BackgroundColor="#f28f00" Grid.ColumnSpan="2" Grid.Row="2" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+
+                    <ffimageloading:SvgCachedImage x:Name="backGif"  
+                       Source="informatique.gif"
+                       IsVisible="true" 
+                       Grid.Row="0" Grid.Column="0"
+                       Opacity="0.1" Scale="1.3" />
+                    <Image x:Name="backGif2"  
+                       Source="back2.png"
+                       IsVisible="false" 
+                       Grid.Row="0" Grid.Column="0"
+                       Opacity="1" Scale="1" />
+
+                <Grid Grid.Column="0" Grid.Row="0" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.12*" />
+                        <RowDefinition Height="0.25*" />
+                        <RowDefinition Height="0.25*" />
+                        <RowDefinition Height="0.38*" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label x:Name="description1" 
+                       HorizontalOptions="Center" 
+                       VerticalOptions="Center" 
+                       Grid.Row="1"
+                       Grid.Column="0"
+                       IsVisible="True"
+                       HorizontalTextAlignment="Center" 
+                       TextColor="White" 
+                       Font="Bold,20"
+                       Text=""
+                       FontFamily="{StaticResource OpenSans-Bold}" />
+
+                    <Label x:Name="description2" 
+                       HorizontalOptions="Center" 
+                       VerticalOptions="Center" 
+                       Grid.Row="3"
+                       Grid.Column="0"
+                       IsVisible="True"
+                       HorizontalTextAlignment="Center" 
+                       TextColor="White" 
+                       Font="Bold,20"
+                       Text=""
+                       FontFamily="{StaticResource OpenSans-Bold}" />
+                </Grid>
+                
+                <Grid Grid.Column="0" Grid.Row="0" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.05*" />
+                        <RowDefinition Height="0.3*" />
+                        <RowDefinition Height="0.4*" />
+                        <RowDefinition Height="0.25*" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                <Label x:Name="tarifsDesc1" 
+                       HorizontalOptions="Center" 
+                       VerticalOptions="Center" 
+                       Grid.Row="1"
+                       IsVisible="False"
+                       Grid.Column="0"
+                       HorizontalTextAlignment="Start" 
+                       TextColor="Black" 
+                       Font="Bold,20"
+                       Text=""
+                       FontFamily="{StaticResource OpenSans-Bold}" />
+
+                    <Label x:Name="tarifsDesc2" 
+                       HorizontalOptions="Center" 
+                       VerticalOptions="Center" 
+                       Grid.Row="3"
+                       IsVisible="False"
+                       Grid.Column="0"
+                       HorizontalTextAlignment="Start" 
+                       TextColor="Black" 
+                       Font="Bold,20"
+                       Text=""
+                       FontFamily="{StaticResource OpenSans-Bold}" />
+
+                </Grid>
+                <ImageButton x:Name="Tarifs" Clicked="switchTarif" Source="tarifs.png" BorderWidth="0" 
+                             HorizontalOptions="Center" VerticalOptions="Center" 
+                             Grid.Row="0" Grid.Column="0" BackgroundColor="#00000000"></ImageButton>
+
+                <ImageButton x:Name="accueilB" Clicked="switchTarif" IsVisible="false" Source="accueil.png" BorderWidth="0"
+                             HorizontalOptions="Center" VerticalOptions="Center"
+                             Grid.Row="0" Grid.Column="0" BackgroundColor="#00000000"></ImageButton>
+                             
+            </Grid>
+
+            <Label x:Name="titreDepannage" 
+                       Grid.Row="1"
+                       Grid.ColumnSpan="2"
+                       HorizontalOptions="Center" 
+                       VerticalOptions="Start" 
+                       HorizontalTextAlignment="Center" 
+                       TextColor="White" 
+                       Font="Bold,20"
+                       Text=""
+                       FontFamily="{StaticResource OpenSans-Bold}" />
+
+        </Grid>
+    </ContentView>
+</ContentPage>
